@@ -1,0 +1,17 @@
+employer-portal/
+│
+├── index.html               <- main dashboard
+├── upload-candidate.html
+├── post-position-quick.html
+├── post-position-deep.html
+├── search.html
+├── search-results.html
+├── my-positions.html
+├── position-detail.html
+├── templates.html
+├── team.html
+├── reports.html
+├── settings.html
+│
+└── css/
+    └── styles.css           <- shared CSS for all pages

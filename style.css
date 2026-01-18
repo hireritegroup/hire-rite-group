@@ -1,61 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIRE RITE GROUP</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Fixed Navigation Header -->
-    <header>
-        <nav>
-            <div class="logo">HIRE RITE</div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="for-employers.html">For Employers</a></li>
-                <li><a href="for-job-seekers.html">For Job Seekers</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="auth-buttons">
-                <a href="login.html">Login</a>
-                <a href="signup.html">Sign Up</a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Hire Rite Group</h1>
-        <p>Your trusted partner for hiring the right talent fast.</p>
-        <div class="cta-buttons">
-            <a href="employer-signup.html" class="cta-btn">Employers</a>
-            <a href="employee-signup.html" class="cta-btn">Job Seekers</a>
-        </div>
-    </section>
-
-    <!-- Value Propositions Section -->
-    <section class="value-propositions">
-        <div class="card">
-            <h3>Accuracy</h3>
-            <p>Our matching technology ensures accurate results.</p>
-        </div>
-        <div class="card">
-            <h3>Speed</h3>
-            <p>Get results within minutes, not days.</p>
-        </div>
-        <div class="card">
-            <h3>Privacy</h3>
-            <p>Your data is protected with the highest security standards.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Hire Rite Group</p>
-    </footer>
-</body>
-</html>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
+header { background:#333; color:white; padding:10px; text-align:center; }
+header .menu { list-style:none; padding:0; }
+header .menu li { display:inline; margin:0 15px; }
+header .menu li a { color:white; text-decoration:none; }
+.hero { text-align:center; padding:50px; background:#007BFF; color:white; }
+.cta-btn { background:#FF9900; color:white; padding:10px 20px; margin:5px; text-decoration:none; }
+section { padding:30px; text-align:center; }
+.card, .feature-cards div { display:inline-block; padding:20px; margin:10px; background:white; border-radius:5px; }
+footer { background:#333; color:white; padding:20px; text-align:center; }

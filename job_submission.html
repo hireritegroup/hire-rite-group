@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Submission - Hire Right Group</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Job - Hire Right Group</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="job_submission.html">Submit Job</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <h1>Submit a Job</h1>
-        <p>Fill out the form below to submit a job for employee evaluation.</p>
-    </header>
+  <main>
+    <h1>Submit Your Job</h1>
+    <form action="https://formspree.io/f/mwkjxjpo" method="POST">
+      <label for="job_title">Job Title</label>
+      <input type="text" id="job_title" name="job_title" required>
 
-    <!-- Job Submission Form -->
-    <section class="job-form">
-        <form action="https://formspree.io/f/xknyvbm" method="POST">
-            <label for="jobTitle">Job Title:</label>
-            <input type="text" id="jobTitle" name="jobTitle" required>
+      <label for="job_description">Job Description</label>
+      <textarea id="job_description" name="job_description" required></textarea>
 
-            <label for="description">Job Description:</label>
-            <textarea id="description" name="description" required></textarea>
+      <label for="job_requirements">Job Requirements</label>
+      <textarea id="job_requirements" name="job_requirements" required></textarea>
 
-            <label for="requirements">Job Requirements:</label>
-            <textarea id="requirements" name="requirements" required></textarea>
+      <label for="job_file">Upload File (Optional)</label>
+      <input type="file" id="job_file" name="job_file">
 
-            <input type="submit" value="Submit Job">
-        </form>
-    </section>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
 
-    <footer>
-        <p>&copy; 2026 Hire Right Group</p>
-    </footer>
-
+  <footer>
+    <p>&copy; 2026 Hire Right Group</p>
+  </footer>
 </body>
 </html>

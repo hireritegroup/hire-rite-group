@@ -1,110 +1,44 @@
-/* Navigation Menu */
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    background-color: #34495E;
-    padding: 10px;
-    margin: 0;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #E67E22;
-}
-/* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and General Styles */
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #F7F7F7;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Header */
 header {
-    background-color: #2C3E50;
-    color: #fff;
-    padding: 40px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 48px;
-}
-
-header p {
-    font-size: 20px;
-}
-
-/* Services Section */
-.services {
-    padding: 40px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.services .service {
-    display: inline-block;
-    margin: 20px;
-    padding: 20px;
-    background-color: #ECF0F1;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 30%;
-}
-
-.services .service h3 {
-    font-size: 24px;
-    color: #34495E;
-}
-
-.services .service p {
-    font-size: 16px;
-    color: #7F8C8D;
-}
-
-/* Call to Action */
-.cta {
-    background-color: #E67E22;
+    background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px 0;
     text-align: center;
 }
 
-.cta a {
+header .menu {
+    list-style: none;
+    padding: 0;
+}
+
+header .menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header .menu li a {
+    color: white;
     text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 30px;
-    background-color: #1ABC9C;
-    border-radius: 5px;
+    font-size: 18px;
 }
 
-.cta a:hover {
-    background-color: #16A085;
-}
-
-/* Footer */
-footer {
-    background-color: #2C3E50;
-    color: white;
-    padding: 15px;
+.hero {
     text-align: center;
+    padding: 50px;
+    background-color: #007BFF;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }

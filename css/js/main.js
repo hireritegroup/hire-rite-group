@@ -1,23 +1,14 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employer Dashboard</title>
+// Sidebar toggle (if needed)
+const toggleSidebar = () => {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('collapsed');
+}
 
-  <!-- Link to your CSS -->
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-// Simple FAQ toggle
-document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-item p:first-child");
+// Modal example
+function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+}
 
-  faqItems.forEach((question) => {
-    question.addEventListener("click", function () {
-      const answer = this.nextElementSibling;
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
-      } else {
-        answer.style.display = "block";
-      }
-    });
-  });
-});
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}

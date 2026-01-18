@@ -6,12 +6,30 @@
 <title>Upload Candidate</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js" defer></script>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; background: #f5f6fa;
+}
+.sidebar {
+    width: 250px; background: #2c3e50; position: fixed; height: 100%; padding-top: 20px;
+}
+.sidebar a {
+    display: block; color: #ecf0f1; padding: 15px 25px; text-decoration: none;
+}
+.sidebar a:hover { background: #34495e; }
+.main-content { margin-left: 250px; padding: 20px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header img { height: 50px; }
+header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-size: 18px; }
+.card { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);}
+input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+button { background: #2980b9; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+button:hover { background: #3498db; }
+</style>
 </head>
 <body>
 
-<!-- Sidebar -->
 <div class="sidebar">
     <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
     <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
@@ -24,7 +42,6 @@
     <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
 </div>
 
-<!-- Main Content -->
 <div class="main-content">
 <header>
     <img src="assets/logo.png" alt="Logo">
@@ -36,28 +53,38 @@
 </header>
 
 <h1>Upload Candidate</h1>
-<p style="margin-bottom: 30px; color: #00796b;">Fill in candidate details to add to your database</p>
+<p>Fill in the candidate details below:</p>
 
 <div class="card">
     <form>
-        <label for="name">Candidate Name</label>
-        <input type="text" id="name" placeholder="Enter full name">
-
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe">
+        
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter email">
-
+        <input type="email" id="email" placeholder="john@example.com">
+        
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="+1 234 567 890">
+        
         <label for="position">Position Applied For</label>
-        <input type="text" id="position" placeholder="Position">
-
+        <select id="position">
+            <option>Software Engineer</option>
+            <option>UI Designer</option>
+            <option>Project Manager</option>
+        </select>
+        
         <label for="resume">Upload Resume</label>
         <input type="file" id="resume">
-
+        
+        <label for="notes">Notes</label>
+        <textarea id="notes" rows="4" placeholder="Add candidate notes here"></textarea>
+        
         <button type="submit">Upload Candidate</button>
     </form>
 </div>
 
 <div class="card" style="text-align:center;">
-    <img src="assets/upload-candidate.png" alt="Candidate Illustration" style="width:80%; border-radius:10px; margin-top:15px;">
+    <img src="assets/illustration-upload.png" alt="Upload Illustration">
 </div>
 
 </div>

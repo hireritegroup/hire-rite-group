@@ -1,65 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employer Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* ======= Reset & Fonts ======= */
+body, html {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f8;
+}
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+/* ======= Sidebar ======= */
+.sidebar {
+    position: fixed;
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    background: linear-gradient(180deg, #00796b, #004d40);
+    padding-top:20px;
+    display:flex;
+    flex-direction:column;
+}
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+.sidebar a {
+    color:white;
+    padding:15px 20px;
+    text-decoration:none;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition: 0.3s;
+}
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+    border-left: 4px solid #ffab00;
+}
 
-    <!-- JS Scripts -->
-    <script src="js/script.js" defer></script>
+/* ======= Main Content ======= */
+.main-content {
+    margin-left:250px;
+    padding:20px 40px;
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+header nav a {
+    color:#333;
+    margin-left:20px;
+    font-size:18px;
+    text-decoration:none;
+}
+
+header img {
+    height:50px;
+}
+
+/* ======= Headings ======= */
+h1 {
+    color:#00796b;
+    margin-bottom:10px;
+}
+
+p {
+    color:#555;
+}
+
+/* ======= Cards ======= */
+.card {
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ======= Buttons ======= */
+button {
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    background:#ffab00;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover {
+    background:#ff8f00;
+}
+
+/* ======= Forms ======= */
+input, select {
+    width:100%;
+    padding:10px;
+    margin:10px 0 20px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+/* ======= Table ======= */
+table {
+    width:100%;
+    border-collapse: collapse;
+    margin-bottom:20px;
+}
+
+table th, table td {
+    padding:12px;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+}
+
+table th {
+    background: #00796b;
+    color:white;
+}
+
+/* ======= Images ======= */
+img {
+    max-width:100%;
+    border-radius:10px;
+}
+
+/* ======= Responsive ======= */
+@media screen and (max-width: 768px){
+    .sidebar{
+        width:200px;
+    }
+    .main-content{
+        margin-left:200px;
+        padding:20px;
+    }
+}
+</style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">HIRE RITE</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="#">Logout</a></li>
-    </ul>
-  </nav>
-</header>
-
+<!-- Sidebar -->
 <div class="sidebar">
-  <a href="index.html">Dashboard</a>
-  <a href="post-position-quick.html">Post Position</a>
-  <a href="templates.html">Templates</a>
+    <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
+    <a href="post-position-quick.html"><i class="fas fa-briefcase"></i> Post Position</a>
+    <a href="search.html"><i class="fas fa-search"></i> Search Database</a>
+    <a href="my-positions.html"><i class="fas fa-list"></i> My Positions</a>
+    <a href="templates.html"><i class="fas fa-copy"></i> Templates</a>
+    <a href="team.html"><i class="fas fa-users"></i> Team</a>
+    <a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
 </div>
 
-<div class="main">
-  <h1>Templates</h1>
+<!-- Main Content -->
+<div class="main-content">
+<header>
+    <img src="assets/logo.png" alt="Logo">
+    <nav>
+        <a href="#"><i class="fas fa-bell"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+        <a href="#">Logout</a>
+    </nav>
+</header>
 
-  <button class="new-template-btn">Create New Template</button>
+<h1>Page Title Here</h1>
+<p>Describe what this page is about here.</p>
 
-  <div class="template-card">
-    <h3>Software Engineer</h3>
-    <p>Times Used: 15</p>
-    <p>Success Rate: 92%</p>
-    <p>Last Used: Jan 10, 2026</p>
-    <button>Use Template</button>
-    <button>Edit</button>
-    <button>Delete</button>
-  </div>
+<div class="card">
+    <h2>Example Section</h2>
+    <p>Place your forms, tables, or content here. Each section is inside a card for a professional look.</p>
+</div>
 
-  <div class="template-card">
-    <h3>Marketing Manager</h3>
-    <p>Times Used: 8</p>
-    <p>Success Rate: 88%</p>
-    <p>Last Used: Jan 15, 2026</p>
-    <button>Use Template</button>
-    <button>Edit</button>
-    <button>Delete</button>
-  </div>
+<div class="card" style="text-align:center;">
+    <img src="assets/illustration.png" alt="Illustration">
+</div>
+
+<button>Click Me</button>
 
 </div>
 

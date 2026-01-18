@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employer Portal - Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Paste the full style from the template I shared earlier */
+</style>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
-        <a href="post-position-quick.html"><i class="fas fa-briefcase"></i> Post Position</a>
-        <a href="search.html"><i class="fas fa-search"></i> Search Database</a>
-        <a href="my-positions.html"><i class="fas fa-list"></i> My Positions</a>
-        <a href="templates.html"><i class="fas fa-copy"></i> Templates</a>
-        <a href="team.html"><i class="fas fa-users"></i> Team</a>
-        <a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a>
-        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
-    </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <header>
-            <img src="assets/logo.png" alt="Logo">
-            <nav>
-                <a href="#"><i class="fas fa-bell"></i></a>
-                <a href="#"><i class="fas fa-user-circle"></i></a>
-                <a href="#">Logout</a>
-            </nav>
-        </header>
+<div class="sidebar">
+    <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
+    <a href="post-position-quick.html"><i class="fas fa-briefcase"></i> Post Position</a>
+    <a href="search.html"><i class="fas fa-search"></i> Search Database</a>
+    <a href="my-positions.html"><i class="fas fa-list"></i> My Positions</a>
+    <a href="templates.html"><i class="fas fa-copy"></i> Templates</a>
+    <a href="team.html"><i class="fas fa-users"></i> Team</a>
+    <a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+</div>
 
-        <h1>Welcome, Business Name!</h1>
+<div class="main-content">
+<header>
+    <img src="assets/logo.png" alt="Logo">
+    <nav>
+        <a href="#"><i class="fas fa-bell"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+        <a href="#">Logout</a>
+    </nav>
+</header>
 
-        <div class="card">
-            <h3>Total Candidates Uploaded</h3>
-            <p>42</p>
-        </div>
+<h1>Welcome to Your Dashboard</h1>
+<p>Here’s a quick overview of your activity and latest updates.</p>
 
-        <div class="card">
-            <h3>Open Positions</h3>
-            <p>8</p>
-        </div>
+<div class="card">
+    <h2>Recent Candidates</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Software Engineer</td>
+                <td>Interviewed</td>
+                <td><button>View</button></td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>UI Designer</td>
+                <td>Pending</td>
+                <td><button>View</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-        <div class="card">
-            <h3>Successful Hires</h3>
-            <p>15</p>
-        </div>
+<div class="card" style="text-align:center;">
+    <img src="assets/illustration-dashboard.png" alt="Dashboard Illustration">
+</div>
 
-        <div class="card">
-            <h3>This Month's Activity</h3>
-            <p>23 actions</p>
-        </div>
-    </div>
+</div>
 </body>
 </html>

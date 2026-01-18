@@ -1,156 +1,99 @@
-/* Reset */
+/* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Body */
+/* Body and Layout */
 body {
-  background-color: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+    background: #f4f7fc;
+    color: #333;
 }
 
-/* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0d6efd;
-  padding: 1rem 2rem;
-  color: white;
+    background-color: #1e88e5;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+header img {
+    height: 40px;
 }
 
-header nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+nav a:hover {
+    text-decoration: underline;
 }
 
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Sidebar */
 .sidebar {
-  width: 220px;
-  background-color: #fff;
-  border-right: 1px solid #ddd;
-  position: fixed;
-  top: 70px;
-  bottom: 0;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    width: 220px;
+    background-color: #263238;
+    color: white;
+    min-height: 100vh;
+    position: fixed;
+    padding-top: 20px;
 }
 
 .sidebar a {
-  text-decoration: none;
-  color: #0d6efd;
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-weight: 500;
+    display: block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .sidebar a:hover {
-  background-color: #0d6efd;
-  color: white;
+    background-color: #1e88e5;
 }
 
-/* Main Content */
-.main {
-  margin-left: 240px;
-  padding: 2rem;
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
 }
 
-.main h1 {
-  margin-bottom: 1rem;
-  color: #0d6efd;
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
 }
 
 /* Buttons */
 button {
-  background-color: #0d6efd;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #1565c0;
 }
 
-/* Cards */
-.candidate-card, .position-card, .template-card {
-  background-color: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-/* Pagination */
-.pagination {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-/* Page Buttons */
-.new-position-btn, .new-template-btn {
-  background-color: #20c997;
-}
-
-.new-position-btn:hover, .new-template-btn:hover {
-  background-color: #138d75;
-}
-
-/* Colorful Highlights */
-p span.highlight {
-  background-color: #ffe066;
-  padding: 2px 6px;
-  border-radius: 3px;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .sidebar {
-    position: relative;
+/* Form inputs */
+input, select, textarea {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-  }
-  .main {
-    margin-left: 0;
-    padding: 1rem;
-  }
-  .results-grid {
-    grid-template-columns: 1fr;
-  }
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
+
+/* Widgets, modals, tables, etc. can be added here */

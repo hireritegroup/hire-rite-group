@@ -1,81 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search Database</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-body { font-family: 'Poppins', sans-serif; margin: 0; background: #f5f6fa; }
-.sidebar { width: 250px; background: #2c3e50; position: fixed; height: 100%; padding-top: 20px; }
-.sidebar a { display: block; color: #ecf0f1; padding: 15px 25px; text-decoration: none; transition: 0.3s; }
-.sidebar a:hover { background: #34495e; }
-.main-content { margin-left: 250px; padding: 20px; }
-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-header img { height: 50px; background: #fff; padding: 5px 10px; border-radius: 5px; }
-header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-size: 18px; }
-.card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);}
-input, button { padding: 10px; margin: 10px 0; width: 100%; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; }
-button { background: #e67e22; color: #fff; border: none; cursor: pointer; }
-button:hover { background: #cf6f17; }
-.table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-.table th, .table td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
-.table th { background: #2980b9; color: #fff; }
-.table tr:hover { background: #ecf0f1; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Candidates</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <div class="sidebar">
-    <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-    <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
-    <a href="post-position.html"><i class="fas fa-briefcase"></i> Post Position</a>
-    <a href="search.html"><i class="fas fa-search"></i> Search Database</a>
-    <a href="my-positions.html"><i class="fas fa-list"></i> My Positions</a>
-    <a href="templates.html"><i class="fas fa-copy"></i> Templates</a>
-    <a href="team.html"><i class="fas fa-users"></i> Team</a>
-    <a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a>
-    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+  <a href="index.html">Dashboard</a>
+  <a href="upload-candidate.html">Upload Candidate</a>
+  <a href="post-position.html">Post Position</a>
+  <a href="search.html">Search Database</a>
+  <a href="my-positions.html">My Positions</a>
+  <a href="templates.html">Templates</a>
+  <a href="team.html">Team</a>
+  <a href="reports.html">Reports</a>
+  <a href="settings.html">Settings</a>
 </div>
 
 <div class="main-content">
-<header>
-    <img src="https://via.placeholder.com/120x50?text=Logo" alt="Logo">
-    <nav>
-        <a href="#"><i class="fas fa-bell"></i></a>
-        <a href="#"><i class="fas fa-user-circle"></i></a>
-        <a href="#">Logout</a>
-    </nav>
-</header>
+  <header>
+    <h1>Search Database</h1>
+  </header>
 
-<h1>Search Database</h1>
-<div class="card">
-    <form>
-        <input type="text" placeholder="Search candidates, positions, or keywords...">
-        <button type="submit"><i class="fas fa-search"></i> Search</button>
-    </form>
+  <div class="card">
+    <input type="text" id="searchInput" placeholder="Search by name, position..." onkeyup="searchCandidates()">
+  </div>
+
+  <div id="results"></div>
 </div>
 
-<div class="card">
-    <h3>Search Results</h3>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Email</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>John Doe</td><td>Software Engineer</td><td>john@example.com</td><td>Interview Scheduled</td></tr>
-            <tr><td>Mary Smith</td><td>UI Designer</td><td>mary@example.com</td><td>Resume Uploaded</td></tr>
-            <tr><td>David Lee</td><td>Project Manager</td><td>david@example.com</td><td>Offer Made</td></tr>
-        </tbody>
-    </table>
-</div>
+<script>
+  const candidates = [
+    { name: "John Doe", position: "Software Engineer", location: "New York" },
+    { name: "Jane Smith", position: "Project Manager", location: "London" },
+    { name: "Ahmed Ali", position: "Designer", location: "Dubai" },
+    { name: "Maria Garcia", position: "HR Specialist", location: "Madrid" }
+  ];
 
-</div>
+  function searchCandidates() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    const filtered = candidates.filter(c => 
+      c.name.toLowerCase().includes(input) ||
+      c.position.toLowerCase().includes(input) ||
+      c.location.toLowerCase().includes(input)
+    );
+
+    if(filtered.length === 0){
+      resultsDiv.innerHTML = "<p>No results found.</p>";
+      return;
+    }
+
+    filtered.forEach(c => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `<h3>${c.name}</h3>
+                        <p>Position: ${c.position}</p>
+                        <p>Location: ${c.location}</p>`;
+      resultsDiv.appendChild(card);
+    });
+  }
+</script>
+
 </body>
 </html>

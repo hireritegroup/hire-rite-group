@@ -7,27 +7,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0; background: #f5f6fa;
-}
-.sidebar {
-    width: 250px; background: #2c3e50; position: fixed; height: 100%; padding-top: 20px;
-}
-.sidebar a {
-    display: block; color: #ecf0f1; padding: 15px 25px; text-decoration: none;
-    transition: 0.3s;
-}
+body { font-family: 'Poppins', sans-serif; margin: 0; background: #f5f6fa; }
+.sidebar { width: 250px; background: #2c3e50; position: fixed; height: 100%; padding-top: 20px; }
+.sidebar a { display: block; color: #ecf0f1; padding: 15px 25px; text-decoration: none; transition: 0.3s; }
 .sidebar a:hover { background: #34495e; }
 .main-content { margin-left: 250px; padding: 20px; }
 header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-header img { height: 50px; }
+header img { height: 50px; background: #fff; padding: 5px 10px; border-radius: 5px; }
 header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-size: 18px; }
 .card { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);}
 .card h3 { margin-top: 0; }
 .stats { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
 .stats .card { flex: 1; min-width: 200px; text-align: center; }
 .chart-placeholder { height: 250px; background: #ecf0f1; border-radius: 10px; display: flex; justify-content: center; align-items: center; color: #7f8c8d; font-size: 18px; }
+ul { padding-left: 20px; }
 </style>
 </head>
 <body>
@@ -35,7 +28,7 @@ header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-si
 <div class="sidebar">
     <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
     <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
-    <a href="post-position-quick.html"><i class="fas fa-briefcase"></i> Post Position</a>
+    <a href="post-position.html"><i class="fas fa-briefcase"></i> Post Position</a>
     <a href="search.html"><i class="fas fa-search"></i> Search Database</a>
     <a href="my-positions.html"><i class="fas fa-list"></i> My Positions</a>
     <a href="templates.html"><i class="fas fa-copy"></i> Templates</a>
@@ -46,7 +39,7 @@ header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-si
 
 <div class="main-content">
 <header>
-    <img src="assets/logo.png" alt="Logo">
+    <img src="https://via.placeholder.com/120x50?text=Logo" alt="Logo">
     <nav>
         <a href="#"><i class="fas fa-bell"></i></a>
         <a href="#"><i class="fas fa-user-circle"></i></a>
@@ -57,22 +50,10 @@ header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-si
 <h1>Dashboard</h1>
 
 <div class="stats">
-    <div class="card">
-        <h3>New Candidates</h3>
-        <p style="font-size: 28px; color: #2980b9;">45</p>
-    </div>
-    <div class="card">
-        <h3>Open Positions</h3>
-        <p style="font-size: 28px; color: #27ae60;">12</p>
-    </div>
-    <div class="card">
-        <h3>Interviews Scheduled</h3>
-        <p style="font-size: 28px; color: #f39c12;">8</p>
-    </div>
-    <div class="card">
-        <h3>Offers Made</h3>
-        <p style="font-size: 28px; color: #c0392b;">3</p>
-    </div>
+    <div class="card"><h3>New Candidates</h3><p style="font-size: 28px; color: #2980b9;">45</p></div>
+    <div class="card"><h3>Open Positions</h3><p style="font-size: 28px; color: #27ae60;">12</p></div>
+    <div class="card"><h3>Interviews Scheduled</h3><p style="font-size: 28px; color: #f39c12;">8</p></div>
+    <div class="card"><h3>Offers Made</h3><p style="font-size: 28px; color: #c0392b;">3</p></div>
 </div>
 
 <div class="card">

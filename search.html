@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Database</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">HIRE RITE</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="sidebar">
+  <a href="index.html">Dashboard</a>
+  <a href="upload-candidate.html">Upload Candidate</a>
+  <a href="post-position-quick.html">Post Position</a>
+  <a href="search.html">Search Database</a>
+</div>
+
+<div class="main">
+  <h1>Search Candidates</h1>
+  <form>
+    <label>Location</label>
+    <input type="text">
+
+    <label>Education</label>
+    <select>
+      <option>High School</option>
+      <option>Bachelor's</option>
+      <option>Master's</option>
+      <option>PhD</option>
+    </select>
+
+    <label>Experience</label>
+    <select>
+      <option>0-1 years</option>
+      <option>2-5 years</option>
+      <option>5+ years</option>
+    </select>
+
+    <label>Availability</label>
+    <select>
+      <option>Immediate</option>
+      <option>Within 1 month</option>
+      <option>Flexible</option>
+    </select>
+
+    <label>Gender</label>
+    <select>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>Minimum Match Percentage</label>
+    <input type="range" min="0" max="100" value="70">
+
+    <button type="submit" class="submit-btn">Search</button>
+    <button type="button" class="cancel-btn">Clear Filters</button>
+  </form>
+</div>
+
+</body>
+</html>

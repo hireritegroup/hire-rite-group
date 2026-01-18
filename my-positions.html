@@ -1,74 +1,102 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employer Portal</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- JS Scripts -->
-    <script src="js/script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Positions</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body { font-family: 'Poppins', sans-serif; margin: 0; background: #f5f6fa; }
+.sidebar { width: 250px; background: #2c3e50; position: fixed; height: 100%; padding-top: 20px; }
+.sidebar a { display: block; color: #ecf0f1; padding: 15px 25px; text-decoration: none; transition: 0.3s; }
+.sidebar a:hover { background: #34495e; }
+.main-content { margin-left: 250px; padding: 20px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header img { height: 50px; background: #fff; padding: 5px 10px; border-radius: 5px; }
+header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-size: 18px; }
+.card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.table th, .table td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+.table th { background: #8e44ad; color: #fff; }
+.table tr:hover { background: #ecf0f1; }
+button { padding: 10px 15px; border: none; border-radius: 5px; background: #8e44ad; color: #fff; cursor: pointer; }
+button:hover { background: #732d91; }
+</style>
 </head>
-
 <body>
 
+<div class="sidebar">
+    <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
+    <a href="post-position.html"><i class="fas fa-briefcase"></i> Post Position</a>
+    <a href="search.html"><i class="fas fa-search"></i> Search Database</a>
+    <a href="my-positions.html"><i class="fas fa-list"></i> My Positions</a>
+    <a href="templates.html"><i class="fas fa-copy"></i> Templates</a>
+    <a href="team.html"><i class="fas fa-users"></i> Team</a>
+    <a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+</div>
+
+<div class="main-content">
 <header>
-  <div class="logo">HIRE RITE</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="#">Logout</a></li>
-    </ul>
-  </nav>
+    <img src="https://via.placeholder.com/120x50?text=Logo" alt="Logo">
+    <nav>
+        <a href="#"><i class="fas fa-bell"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+        <a href="#">Logout</a>
+    </nav>
 </header>
 
-<div class="sidebar">
-  <a href="index.html">Dashboard</a>
-  <a href="upload-candidate.html">Upload Candidate</a>
-  <a href="post-position-quick.html">Post Position</a>
-  <a href="search.html">Search Database</a>
+<h1>My Positions</h1>
+<div class="card">
+    <h3>Active Positions</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Software Engineer</td>
+                <td>Engineering</td>
+                <td>New York</td>
+                <td>Open</td>
+                <td><button>Edit</button></td>
+            </tr>
+            <tr>
+                <td>UI Designer</td>
+                <td>Design</td>
+                <td>Remote</td>
+                <td>Closed</td>
+                <td><button>Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
-<div class="main">
-  <h1>Search Results</h1>
-
-  <div class="results-grid">
-    <div class="candidate-card">
-      <h3>John Doe</h3>
-      <p>Match: 92% ✅</p>
-      <p>Location: New York</p>
-      <p>Experience: 5 years</p>
-      <p>Education: Bachelor’s</p>
-      <button>Mark as Hired</button>
-      <button>View Details</button>
-    </div>
-
-    <div class="candidate-card">
-      <h3>Jane Smith</h3>
-      <p>Match: 88% ✅</p>
-      <p>Location: San Francisco</p>
-      <p>Experience: 3 years</p>
-      <p>Education: Master’s</p>
-      <button>Mark as Hired</button>
-      <button>View Details</button>
-    </div>
-
-    <!-- Add more candidate cards here -->
-  </div>
-
-  <div class="pagination">
-    <button>Previous</button>
-    <span>Page 1 of 3</span>
-    <button>Next</button>
-  </div>
+<div class="card">
+    <h3>Archived Positions</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Location</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Project Manager</td><td>Management</td><td>London</td><td>Closed</td></tr>
+        </tbody>
+    </table>
 </div>
 
+</div>
 </body>
 </html>

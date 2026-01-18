@@ -1,123 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HIRE RITE GROUP - Homepage</title>
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employer Dashboard - Hire Rite</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- Header / Navigation -->
 <header>
+  <div class="logo">HIRE RITE</div>
   <nav>
-    <div class="logo">HIRE RITE</div>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="how-it-works-employers.html">How It Works</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="employee-signup.html">Sign Up</a></li>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="upload-candidate.html">Upload Candidate</a></li>
+      <li><a href="post-position-quick.html">Post Position</a></li>
+      <li><a href="#">Logout</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <h1>Hire the Right Talent, Fast and Secure</h1>
-  <p>Smart matching, instant results, data-driven hiring for Employers & Job Seekers</p>
-  <button onclick="location.href='employer-signup.html'">For Employers</button>
-  <button onclick="location.href='employee-signup.html'">For Job Seekers</button>
-</section>
+<div class="sidebar">
+  <a href="index.html">Dashboard</a>
+  <a href="upload-candidate.html">Upload Candidate</a>
+  <a href="post-position-quick.html">Post Position</a>
+  <a href="search.html">Search Database</a>
+  <a href="my-positions.html">My Positions</a>
+  <a href="templates.html">Templates</a>
+  <a href="team.html">Team</a>
+  <a href="reports.html">Reports</a>
+  <a href="settings.html">Settings</a>
+</div>
 
-<!-- Value Propositions -->
-<section>
-  <h2>Why Choose Us</h2>
-  <div class="features">
-    <div class="feature-card">Accuracy</div>
-    <div class="feature-card">Speed</div>
-    <div class="feature-card">Privacy</div>
+<div class="main">
+  <h1>Welcome, Business Name!</h1>
+  <div class="stats">
+    <div class="card">Total Candidates Uploaded: 150</div>
+    <div class="card">Open Positions: 12</div>
+    <div class="card">Successful Hires: 45</div>
+    <div class="card">This Month's Activity: 20</div>
   </div>
-</section>
-
-<!-- How It Works -->
-<section>
-  <h2>How It Works</h2>
-  <div class="how-it-works">
-    <div>
-      <h3>For Employers</h3>
-      <p>Step 1 → Step 2 → Step 3 → Step 4</p>
-    </div>
-    <div>
-      <h3>For Job Seekers</h3>
-      <p>Step 1 → Step 2 → Step 3 → Step 4</p>
-    </div>
+  <div class="stats">
+    <div class="card" onclick="location.href='upload-candidate.html'">Upload New Candidate</div>
+    <div class="card" onclick="location.href='post-position-quick.html'">Post New Position</div>
+    <div class="card" onclick="location.href='search.html'">Search Database</div>
   </div>
-</section>
-
-<!-- Features Showcase -->
-<section>
-  <h2>Features</h2>
-  <div class="features-showcase">
-    <div>Triple Analysis</div>
-    <div>Smart Matching</div>
-    <div>Data Driven</div>
-    <div>Instant Results</div>
-    <div>Secure & Private</div>
-    <div>Mobile Ready</div>
-  </div>
-</section>
-
-<!-- Statistics -->
-<section>
-  <h2>Our Impact</h2>
-  <div class="statistics">
-    <div>Successful Hires: 1,234</div>
-    <div>Match Accuracy: 98%</div>
-    <div>Satisfaction Rating: 4.9/5</div>
-    <div>Success Rate: 92%</div>
-    <div>Average Time to Hire: 10 days</div>
-    <div>Total Companies: 300+</div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section>
-  <h2>What Our Users Say</h2>
-  <div class="testimonials">
-    <div class="testimonial-card">"Amazing results!" - Employer A</div>
-    <div class="testimonial-card">"Found my dream job!" - Job Seeker B</div>
-    <div class="testimonial-card">"Fast and reliable." - Employer C</div>
-  </div>
-</section>
-
-<!-- Pricing CTA -->
-<section>
-  <h2>Get Started</h2>
-  <div class="cta-cards">
-    <div>
-      <h3>Employers</h3>
-      <button onclick="location.href='employer-signup.html'">Sign Up</button>
-    </div>
-    <div>
-      <h3>Job Seekers</h3>
-      <button onclick="location.href='employee-signup.html'">Join Free</button>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2026 Hire Rite Group | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
-  <p>Follow us on 
-    <a href="#">LinkedIn</a> | 
-    <a href="#">Twitter</a> | 
-    <a href="#">Facebook</a>
-  </p>
-</footer>
+</div>
 
 </body>
 </html>

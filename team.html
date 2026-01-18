@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body { font-family: 'Poppins', sans-serif; margin: 0; background: #f5f6fa; }
+.sidebar { width: 250px; background: #2c3e50; position: fixed; height: 100%; padding-top: 20px; }
+.sidebar a { display: block; color: #ecf0f1; padding: 15px 25px; text-decoration: none; transition: 0.3s; }
+.sidebar a:hover { background: #34495e; }
+.main-content { margin-left: 250px; padding: 20px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header img { height: 50px; background: #fff; padding: 5px 10px; border-radius: 5px; }
+header nav a { margin-left: 15px; color: #2c3e50; text-decoration: none; font-size: 18px; }
+.card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.team-member { display: flex; align-items: center; margin-bottom: 15px; }
+.team-member img { width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; }
+button { padding: 8px 12px; border: none; border-radius: 5px; background: #8e44ad; color: #fff; cursor: pointer; }
+button:hover { background: #732d91; }
+</style>
+</head>
+<body>
+<div class="sidebar">
+    <a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="upload-candidate.html"><i class="fas fa-user-plus"></i> Upload Candidate</a>
+    <a href="post-position.html"><i class="fas fa-briefcase"></i> Post Position</a>
+    <a href="search.html"><i class="fas fa-search"></i> Search Database</a>
+    <a href="my-positions.html"><i class="fas fa-list"></i> My Positions</a>
+    <a href="templates.html"><i class="fas fa-copy"></i> Templates</a>
+    <a href="team.html"><i class="fas fa-users"></i> Team</a>
+    <a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+</div>
+<div class="main-content">
+<header>
+    <img src="https://via.placeholder.com/120x50?text=Logo" alt="Logo">
+    <nav>
+        <a href="#"><i class="fas fa-bell"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+        <a href="#">Logout</a>
+    </nav>
+</header>
+<h1>Team Members</h1>
+<div class="card">
+    <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="John Doe">
+        <div>
+            <strong>John Doe</strong><br>
+            HR Manager
+        </div>
+        <button style="margin-left:auto;">Message</button>
+    </div>
+    <div class="team-member">
+        <img src="https://via.placeholder.com/60" alt="Jane Smith">
+        <div>
+            <strong>Jane Smith</strong><br>
+            Software Engineer
+        </div>
+        <button style="margin-left:auto;">Message</button>
+    </div>
+</div>
+</div>
+</body>
+</html>

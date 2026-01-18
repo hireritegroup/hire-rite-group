@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Submission - Hire Right Group</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Submit a Job</h1>
+        <p>Fill out the form below to submit a job for employee evaluation.</p>
+    </header>
+
+    <!-- Job Submission Form -->
+    <section class="job-form">
+        <form action="https://formspree.io/f/xknyvbm" method="POST">
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+
+            <label for="description">Job Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="requirements">Job Requirements:</label>
+            <textarea id="requirements" name="requirements" required></textarea>
+
+            <input type="submit" value="Submit Job">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Hire Right Group</p>
+    </footer>
+
+</body>
+</html>

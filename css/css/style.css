@@ -1,32 +1,156 @@
-/* Reset and basic font */
-* { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: Arial, sans-serif; background:#f5f7fa; color:#333; }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
 
 /* Header */
-header { background: #007bff; color: white; padding: 15px; display:flex; justify-content:space-between; align-items:center; }
-header .logo { font-size:1.5em; font-weight:bold; }
-header nav ul { list-style:none; display:flex; margin:0; padding:0; }
-header nav ul li { margin-left:15px; }
-header nav ul li a { color:white; text-decoration:none; font-weight:bold; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d6efd;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
 
 /* Sidebar */
-.sidebar { background:#1c1c1c; color:white; width:220px; position:fixed; top:60px; bottom:0; padding-top:20px; }
-.sidebar a { display:block; color:white; text-decoration:none; padding:10px 20px; margin-bottom:5px; border-radius:5px; }
-.sidebar a:hover { background:#007bff; }
+.sidebar {
+  width: 220px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-/* Main content */
-.main { margin-left:240px; padding:20px; }
-h1 { color:#007bff; margin-bottom:20px; }
+.sidebar a {
+  text-decoration: none;
+  color: #0d6efd;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Main Content */
+.main {
+  margin-left: 240px;
+  padding: 2rem;
+}
+
+.main h1 {
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+/* Buttons */
+button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
 
 /* Cards */
-.stats { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px; }
-.card { flex:1 1 200px; background:white; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; cursor:pointer; }
-.card:hover { box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+.candidate-card, .position-card, .template-card {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
 
-/* Forms */
-form { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); max-width:700px; }
-label { display:block; margin-top:10px; font-weight:bold; }
-input, select, textarea { width:100%; padding:8px; margin-top:5px; border-radius:4px; border:1px solid #ccc; }
-button { margin-top:15px; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
-.submit-btn { background:#28a745; color:white; }
-.cancel-btn { background:#dc3545; color:white; }
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Page Buttons */
+.new-position-btn, .new-template-btn {
+  background-color: #20c997;
+}
+
+.new-position-btn:hover, .new-template-btn:hover {
+  background-color: #138d75;
+}
+
+/* Colorful Highlights */
+p span.highlight {
+  background-color: #ffe066;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
